@@ -26,14 +26,14 @@ Allowed commands: `pnpm exec vue-tsc -b`, `pnpm test`, `pnpm format`, `pnpm form
 
 ## Commands
 
-| Command                       | Use                                  | Agent may run?                |
-| ----------------------------- | ------------------------------------ | ----------------------------- |
-| `pnpm exec vue-tsc -b`        | type-check (no emit) — self-check    | ✅ yes                        |
-| `pnpm test`                   | Vitest (`vitest run`)                | ✅ yes                        |
-| `pnpm format` / `format:check`| Prettier write / check               | ✅ yes                        |
-| `pnpm dev` / `preview` / `test:watch` | dev server / watch           | ❌ never (rule 1)             |
-| `pnpm lint` / `lint:fix`      | eslint                               | ❌ never (rule 2, hook owns it) |
-| `pnpm build` / `verify`       | builds (`vite-ssg`)                  | ❌ never (rule 3)             |
+| Command                               | Use                               | Agent may run?                  |
+| ------------------------------------- | --------------------------------- | ------------------------------- |
+| `pnpm exec vue-tsc -b`                | type-check (no emit) — self-check | ✅ yes                          |
+| `pnpm test`                           | Vitest (`vitest run`)             | ✅ yes                          |
+| `pnpm format` / `format:check`        | Prettier write / check            | ✅ yes                          |
+| `pnpm dev` / `preview` / `test:watch` | dev server / watch                | ❌ never (rule 1)               |
+| `pnpm lint` / `lint:fix`              | eslint                            | ❌ never (rule 2, hook owns it) |
+| `pnpm build` / `verify`               | builds (`vite-ssg`)               | ❌ never (rule 3)               |
 
 > `pnpm dev` proxies `/api` and `/ws` to `localhost:8000`.
 
