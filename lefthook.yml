@@ -1,0 +1,14 @@
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      glob: '*.{js,ts,vue}'
+      run: pnpm exec eslint {staged_files}
+    prettier:
+      glob: '*.{js,ts,vue,json,css,md,html,yml,yaml}'
+      run: pnpm exec prettier --write --ignore-unknown {staged_files}
+
+pre-push:
+  commands:
+    verify:
+      run: pnpm verify
